@@ -1,6 +1,6 @@
 <?php
-$connect=mysql_connect("localhost","root","harry63779588");
-mysql_select_db("Scenario4", $connect) or die('数据库连接错误，错误信息：'.mysql_error()); //链接到Scenario4数据库
+$connect=mysqli_connect("localhost","root","harry63779588");
+mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 
 
 
