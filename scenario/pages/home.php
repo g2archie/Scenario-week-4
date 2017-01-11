@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +25,12 @@
             <li><a href="upload.html">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li><span>allen(allen)</span></li>
-            <li><a href="editprofile.html">Profile</a></li>
+            <li><span><?php echo $_SESSION['user_name'];  ?>     </span></li> 
+            <li><a href="editprofile.php">Profile</a></li>
             <li><a href="../index.html">Sign out</a></li>
         </ul>
     </div>
 </nav>
-
 
 
 <div class="container">
