@@ -23,30 +23,24 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m12">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Login</span>
-                        <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="user_name" type="text" class="validate">
-                                    <label for="user_name">User name:</label>
-                                </div>
-                                <div class="input-field col s12">
-                                    <input id="password" type="password" class="validate">
-                                    <label for="password">Password:</label>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="card-action">
-                        <a href="home.html">login as an user</a>
-                        <a href="administratorhome.html">login as an administrator</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+<fieldset>
+<legend>User Login</legend>
+<form method="post" action="../php/signin.php">  <!-- 表单 -->
+<p>
+<label for="username" class="label">username:</label>
+<input id="username" name="user_name" type="text" class="input" />
+<p/>
+<p>
+<label for="password" class="label">Password:</label>
+<input id="password" name="password" type="password" class="input" />
+<p/>
+<p>
+<input type="submit" name="submit" value="  Submit  " class="left" />
+</p>
+</form>
+</fieldset>
+
 </body>
 </html>
+
