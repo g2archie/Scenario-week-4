@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +28,13 @@
             <li><a href="upload.html">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
+            <input disabled value="<?php echo $_SESSION['name']; ?>" id="user_id" type="text" class="validate">
             <li><a href="editprofile.html">Profile</a></li>
             <li><a href="../index.html">Sign out</a></li>
         </ul>
     </div>
 </nav>
-
+<form method="post" action="../php/newsnippet.php">
     <div class="container">
         <div class="row">
             <div class="col s12 m12">
@@ -42,7 +46,7 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">mode_edit</i>
-                                        <textarea id="snippet" class="materialize-textarea"></textarea>
+                                        <textarea id="snippet" class="materialize-textarea" name="snippet"></textarea>
                                         <label for="snippet">New snippet:</label>
                                     </div>
                                 </div>
@@ -56,6 +60,6 @@
             </div>
         </div>
     </div>
-
+</form>
 </body>
 </html>
