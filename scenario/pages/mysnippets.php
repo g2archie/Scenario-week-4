@@ -28,6 +28,7 @@ session_start();
             <li><a href="upload.html">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
+            <li><span><?php echo $_SESSION['name'];  ?>  </span></li>
             <li><a href="editprofile.php">Profile</a></li>
             <li><a href="../index.html">Sign out</a></li>
         </ul>
