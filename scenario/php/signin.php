@@ -33,7 +33,7 @@ if (is_correct_password($name, $pw)) {
 
 // query database to see if user typed the right password
 function is_correct_password($name, $pw) {
-	$db = new PDO("mysql:dbname=Scenario4", "root", "harry63779588");
+	$db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$rows = $db->query("SELECT Password FROM userinfo WHERE Username = '$name'");
 	foreach ($rows as $row) {
