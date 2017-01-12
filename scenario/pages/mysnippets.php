@@ -62,10 +62,10 @@ session_start();
                     </p>
                 </div>
                 <div class="card-action">
-                    <a href="#">delete</a>
+                    <a href='#'>Delete </a>
+                    
                 </div>
-            </div>
-
+            </div
 
 
         </div>
@@ -73,7 +73,7 @@ session_start();
     <?php
 }
     ?>
-</div>
+</div> 
 
 </body>
 </html>
