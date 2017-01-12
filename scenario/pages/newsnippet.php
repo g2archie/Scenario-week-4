@@ -23,12 +23,12 @@ session_start();
     <div class="nav-wrapper">
         <ul class="left hide-on-med-and-down">
             <li><a href="home.php">Home</a></li>
-            <li><a href="mysnippets.php">My Snippets</a></li>
+            <li><a href="mysnippets.html">My Snippets</a></li>
             <li><a href="#">New Snippets</a></li>
             <li><a href="upload.html">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <input disabled value="<?php echo $_SESSION['name']; ?>" id="user_id" type="text" class="validate">
+            <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
             <li><a href="editprofile.php">Profile</a></li>
             <li><a href="../index.html">Sign out</a></li>
         </ul>
