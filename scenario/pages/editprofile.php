@@ -26,6 +26,7 @@ session_start();
             <li><a href="upload.html">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
+            <li><span><?php echo $_SESSION['name'];  ?>  </span></li>
             <li><a href="#">Profile</a></li>
             <li><a href="../index.html">Sign out</a></li>
         </ul>
@@ -40,7 +41,7 @@ session_start();
                     <span class="card-title">Edit Profile</span>
                     <div class="row">
                         <div class="input-field col s12">
-                            <li><span><?php echo $_SESSION['name'];  ?>  </span></li><!-- username,无法修改 -->
+                            <input disabled value="<?php echo $_SESSION['name']; ?>" id="user_id" type="text" class="validate"> <!-- username,无法修改 -->
                             <label for="user_id">User id:</label>
                         </div>
                         <div class="input-field col s6">
