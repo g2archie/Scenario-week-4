@@ -7,7 +7,7 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 // $result=mysql_query($query1) or die('sql错误'.mysql_error());
 
-mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('$_POST[user_name]','$_POST[password]')"); //将信息添加到userinfo这个表
+mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('$_POST[user_name]','$_POST[password]') "); //将信息添加到userinfo这个表
 
 // $result = mysql_query("SELECT * FROM userinfo");  //显示所有数据
 // while($row = mysql_fetch_array($result))
