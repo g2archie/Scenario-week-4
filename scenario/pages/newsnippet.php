@@ -54,7 +54,8 @@ session_start();
                         </div>
                     </div>
                     <div class="card-action">
-                        <a href="#">submit</a>
+                        <!-- <a href="#">submit</a> -->
+                        <input type="submit" name="submit" value="Update">
                     </div>
                 </div>
             </div>
