@@ -20,7 +20,7 @@ session_start();
     <div class="nav-wrapper">
         <ul class="left hide-on-med-and-down">
             <li><a href="#">Home</a></li>
-            <li><a href="mysnippets.html">My Snippets</a></li>
+            <li><a href="mysnippets.php">My Snippets</a></li>
             <li><a href="newsnippet.php">New Snippets</a></li>
             <li><a href="upload.html">Upload</a></li>
         </ul>
