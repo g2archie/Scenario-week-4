@@ -1,7 +1,7 @@
 <?php
 session_start();
-$connect=mysql_connect("localhost","root","harry63779588");
-mysql_select_db("Scenario4", $connect) or die('数据库连接错误，错误信息：'.mysql_error()); //链接到Scenario4数据库
+$connect=mysqli_connect("localhost","root","123456fxf");
+mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 $name=$_SESSION['user_name'];
 $oldpassword=$_POST['oldpassword'];
 $newpassword=$_POST['newpassword'];
@@ -11,7 +11,7 @@ if (is_correct_password($name,$oldpassword)) {
 	// mysql_query("UPDATE userinfo SET Password=$newpassword, homepage_url = $homepage_url, private_snippet=$private_snippet WHERE Username = '$name' ");
 	// mysql_query("INSERT INTO userinfo (Username, Password, homepage_url, private_snippet) VALUES($name, $newpassword, $homepage_url,$private_snippet) ON DUPLICATE KEY UPDATE Password=$newpassword, homepage_url=$homepage_url, private_snippet=$private_snippet");
 	$sql = "UPDATE userinfo SET Password='$newpassword', homepage_url = '$homepage_url', private_snippet='$private_snippet' WHERE Username = '$name' ";
-    mysql_query($sql) or die(mysql_error());
+    mysqli_query($connect,$sql) or die(mysqli_error());
 
 	header("Location: ../pages/home.php");
 	// echo "success";//test
