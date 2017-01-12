@@ -2,7 +2,7 @@
 session_start();
 $connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
-$name=$_SESSION['user_name'];
+$name=$_SESSION['name'];
 $oldpassword=$_POST['oldpassword'];
 $newpassword=$_POST['newpassword'];
 $homepage_url=$_POST['homepage_url'];
