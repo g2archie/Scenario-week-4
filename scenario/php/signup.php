@@ -1,7 +1,7 @@
 <?php
 //链接数据库服务器
 // echo (!!@mysqli_connect("localhost","root","harry63779588"));
-$connect=mysql_connect("localhost","root","123456fxf");
+$connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 // $query1="INSERT INTO userinfo (Username, Password) VALUES ('allen','123')";
 
