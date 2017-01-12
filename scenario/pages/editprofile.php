@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
 <nav>
     <div class="nav-wrapper">
         <ul class="left hide-on-med-and-down">
-            <li><a href="home.html">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="mysnippets.html">My Snippets</a></li>
             <li><a href="newsnippet.html">New Snippets</a></li>
             <li><a href="upload.html">Upload</a></li>
@@ -28,7 +31,7 @@
         </ul>
     </div>
 </nav>
-
+<form method="POST" action="../php/edit.php">  <!-- 发送表单 -->
 <div class="container">
     <div class="row">
         <div class="col s12 m12">
@@ -37,46 +40,37 @@
                     <span class="card-title">Edit Profile</span>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input disabled value="allen" id="user_id" type="text" class="validate">
+                            <input disabled value="<?php echo $_SESSION['user_name']; ?>" id="user_id" type="text" class="validate"> <!-- username,无法修改 -->
                             <label for="user_id">User id:</label>
                         </div>
                         <div class="input-field col s6">
-                            <input value="allen" id="user_name" type="text" class="validate">
-                            <label class="active" for="user_name">User name:</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="old_password" type="password" class="validate">
+                            <input id="old_password" type="password" class="validate" name="oldpassword">  <!-- 旧密码,需要验证 -->
                             <label for="old_password">OLD Password:</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="new_password" type="password" class="validate">
+                            <input id="new_password" type="password" class="validate" name="newpassword"> <!-- 新密码 -->
                             <label for="new_password">NEW Password:</label>
                         </div>
+                    
                         <div class="input-field col s6">
-                            <input  id="icon_url" type="text" class="validate">
-                            <label class="active" for="icon_url">Icon:</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input  id="homepage_url" type="text" class="validate">
-                            <label class="active" for="homepage_url">Home page::</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input  id="profile_color" type="text" class="validate">
-                            <label class="active" for="profile_color">Profile color::</label>
+                            <input  id="homepage_url" type="url" class="validate" name="homepage_url">
+                            <label class="active" for="homepage_url" >Home page::</label> <!-- homepage url -->
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="private_snippet" class="materialize-textarea"></textarea>
-                            <label for="private_snippet">Private snippet:</label>
+                            <textarea type="text" id="private_snippet" class="materialize-textarea" name="snippet"></textarea>
+                            <label for="private_snippet">Private snippet:</label>   <!-- snippet -->
                         </div>
                     </div>
                 </div>
                 <div class="card-action">
-                    <a href="#">Update</a>
+                    <!-- <a href="#">Update</a> -->
+                    <input type="submit" name="Update" value="Update">
                 </div>
             </div>
         </div>
     </div>
 </div>
+</form>
 </body>
 </html>
