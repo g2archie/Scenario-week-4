@@ -32,7 +32,7 @@ else{
 
 
 function is_correct_password($name, $oldpassword) {
-	$db = new PDO("mysql:dbname=Scenario4", "root", "harry63779588");  //修改
+	$db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");  //修改
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$rows = $db->query("SELECT Password FROM userinfo WHERE Username ='$name' ");
 	foreach ($rows as $row) {
