@@ -45,6 +45,7 @@ session_start();
                 ?>
                 <p>
                 <?=$row['Username'] ?>
+                <?=$name ?> 
                 </p>
             
 
