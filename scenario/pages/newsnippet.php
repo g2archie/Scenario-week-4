@@ -1,6 +1,15 @@
 <?php
 session_start();
+if(time() - $_SESSION['timestamp'] > 60) { //subtract new timestamp from the old one
+    echo"<script>alert('1 Minute over!');</script>";
+    unset($_SESSION['name'], $_SESSION['allsnippet'], $_SESSION['timestamp']);
+    header("Location: home.php"); //redirect to index.php
+    exit;
+} else {
+    $_SESSION['timestamp'] = time(); //set new timestamp
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
