@@ -1,6 +1,5 @@
 <?php
 session_start();
-$newname=$_SESSION['allsnippet'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
