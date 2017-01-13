@@ -30,7 +30,7 @@ session_start();
 
 
 <div class="container">
-   
+   <h4><?php echo $_SESSION['allsnippet'];  ?></h4>
 
     <?php
     session_start();
