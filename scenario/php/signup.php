@@ -14,7 +14,7 @@ $num=mysqli_num_rows($result);
 if($num > 0){    
    echo "<script type='text/javascript'>alert('Username Already exsits!');location='javascript:history.back()';</script>";    
 }else{    
-mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('name','password')"); //将信息添加到userinfo这个表
+mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('$name','$password')"); //将信息添加到userinfo这个表
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/return.html"."\""."</script>";
    //echo "<script type='text/javascript'>alert('Registration Successful');</script>";
    //header('Location:../pages/signin.html');
