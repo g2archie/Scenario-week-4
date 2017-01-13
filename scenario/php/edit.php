@@ -18,7 +18,7 @@ if (is_correct_password($name,$oldpassword)) {
 	// echo "success";//test
 }
 else{
-	echo $name;
+	//echo $name;
 	// $result = mysql_query("SELECT Password FROM userinfo WHERE Username='$name' ")
  //    or die("无效查询: " . mysql_error());
  //    if(is_resource($result) and mysql_num_rows($result)>0){ //because mysql_query returns a resource
@@ -26,7 +26,9 @@ else{
  //    echo $row["Password"];
  //    }
 	// echo $homepage_url;
-	echo "Wrong Password!";
+	//echo "Wrong Password!";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Your password is wrong!"."\"".")".";"."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/editprofile.html"."\""."</script>";
 }
 
 
