@@ -28,7 +28,7 @@ else{
 	// echo $homepage_url;
 	//echo "Wrong Password!";
 	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Your password is wrong!"."\"".")".";"."</script>";
-	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/editprofile.html"."\""."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/editprofile.php"."\""."</script>";
 }
 
 
