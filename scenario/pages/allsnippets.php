@@ -57,10 +57,7 @@ session_start();
                         <?= $row["snippets"] ?>
                     </p>
                 </div>
-                <div class="card-action">
-                    <a href='#deletebutton'>Delete </a>
-                    
-                </div>
+                
             </div
 </div>
 
