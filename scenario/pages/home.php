@@ -64,7 +64,6 @@ foreach ($rows as $row) {
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <img style="height: 5%; width: 5%" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png"/>
                      <span class="card-title"> <?=$row['Username'] ?>   </span>    
                    
                 </div>
