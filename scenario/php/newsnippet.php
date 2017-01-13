@@ -7,7 +7,7 @@ $connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 
 $snippet=$_POST['snippet'];
-?>
+*/?>
 
 
 <script type="  text/javascript  ">
@@ -28,7 +28,7 @@ alert (lol);
 
   </script>
   
-<?php
+<?php*/
 $query="SELECT Num FROM num_for_id WHERE Username='$name' ";
 $result=mysqli_query($connect,$query)or die(mysqli_error());
 $row=mysqli_fetch_row($result);
