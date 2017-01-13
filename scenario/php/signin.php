@@ -25,10 +25,14 @@ if (is_correct_password($name, $pw)) {
 	# redirect?
 	session_start();
 	$_SESSION["name"] = $name;
-	header("Location: ../pages/home.php");
+	//header("Location: ../pages/home.php");
+	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";
 	die();
 } else {
-	header("Location: ../pages/signin.html");
+	//header("Location: ../pages/signin.html");
+	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！Please try again"."\"".")".";"."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
 }
 
 // query database to see if user typed the right password
