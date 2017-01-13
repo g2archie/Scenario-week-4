@@ -50,6 +50,10 @@ session_start();
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
+            <p>
+                        Snippet ID:
+                        <?=$row["ID"] ?>
+                    </p>
             <p><?= $row["snippets"] ?></p>
            </div>
             </div>
