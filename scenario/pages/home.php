@@ -73,7 +73,7 @@ foreach ($rows as $row) {
                     <a href="#">Homepage</a><br>
 
                     <form method="post" action="../php/showsnippet.php">
-                    <button name="Username" value="$row['Username']">All Snippets</button>
+                    <button name="Username" value="$row['Username']" type="submit">All Snippets</button>
                     </form>
 
 
