@@ -12,8 +12,9 @@ if (is_correct_password($name,$oldpassword)) {
 	// mysql_query("INSERT INTO userinfo (Username, Password, homepage_url, private_snippet) VALUES($name, $newpassword, $homepage_url,$private_snippet) ON DUPLICATE KEY UPDATE Password=$newpassword, homepage_url=$homepage_url, private_snippet=$private_snippet");
 	$sql = "UPDATE userinfo SET Password='$newpassword', homepage_url = '$homepage_url', private_snippet='$private_snippet' WHERE Username = '$name' ";
     mysqli_query($connect,$sql) or die(mysqli_error());
-
-	header("Location: ../pages/home.php");
+    echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Changes successfully made!"."\"".")".";"."</script>";
+    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";
+	//header("Location: ../pages/home.php");
 	// echo "success";//test
 }
 else{
