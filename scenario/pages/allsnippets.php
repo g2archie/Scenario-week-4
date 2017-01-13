@@ -46,8 +46,16 @@ session_start();
     $rows=mysqli_query($connect,"select * from Snippets where Username='$newname2' ");
     foreach ($rows as $row ) {
             ?>
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
             <p><?= $row["snippets"] ?></p>
-            
+           </div>
+            </div>
+
+        </div>
+    </div> 
         <?php
         }
 
