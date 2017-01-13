@@ -30,12 +30,11 @@ session_start();
 
 
 <div class="container">
-    <h4> 
-    <?php echo $_SESSION['allsnippet'];?>  Snippets:</h4> 
+    <h4> <?php echo $_SESSION['allsnippet'];?>  Snippets:</h4> 
 
     <?php
     session_start();
-    $newname=$_SESSION['allsnippet'];
+    $newname=$_SESSION['name'];
     $connect=mysqli_connect("localhost","root","123456fxf");
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
 
@@ -62,11 +61,5 @@ session_start();
 
 
 </div>
-
-
-
-
-
-
 </body>
 </html>
