@@ -1,22 +1,8 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @Honghuiyu
- Watch 3
-  Star 0
-  Fork 1 g2archie/Scenario-week-4
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathScenario-week-4/scenario/pages/editprofile.php
-8964eda  22 hours ago
- harrychen0702 add my snippets
-0 contributors
-RawBlameHistory     
-77 lines (73 sloc)  3.59 KB
 <?php
 session_start();
+if($_SESSION['checked']=="" || $_SESSION['checked']=="false"){
+    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
+}
  ?> 
 <!DOCTYPE html>
 <html lang="en">

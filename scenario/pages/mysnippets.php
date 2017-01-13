@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['checked']=="" || $_SESSION['checked']=="false"){
+    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +45,7 @@ session_start();
     <?php 
     $connect=mysqli_connect("localhost","root","123456fxf");
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); 
+
     session_start();
     $name=$_SESSION['name'];
     $query="SELECT snippets,ID FROM Snippets WHERE Username='$name' ";
@@ -100,3 +104,9 @@ session_start();
 </div>
 </body>
 </html>
+
+
+
+
+
+

@@ -3,26 +3,11 @@ $connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 
 
-
+$_SESSION["checked"] = false;
 $name = $_POST["user_name"];
-$pw = $_POST["password"];
-$sql = "SELECT Username FROM userinfo WHERE Username='{$name}' AND Password='{$pw}'";
-$query = mysqli_query($connect,$sql);
-//$userinfo = mysqli_fetch_array($query, MYSQL_ASSOC);
-if($result=mysqli_fetch_array($query)){
-		//登录成功，打印出会员信息
-       //echo '<pre>',print_r($userinfo, 1),'</pre>';
-	session_start();
-	$_SESSION["name"] = $name;
-	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
-	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";
-	//header("Location: ../pages/home.php");
-	die();
-	} else {
-		echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！Please try again"."\"".")".";"."</script>";
-	        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
-	//header("Location: ../pages/signin.html");
-}
+$pw = md5($_POST["password"]);
+
+
 // 检测用户名及密码是否正确
 // $check_query = mysql_query("select Username from userinfo where username='$username' and password='$password' limit 1");
 // if($result = mysql_fetch_array($check_query)){
@@ -36,18 +21,23 @@ if($result=mysqli_fetch_array($query)){
 // }
 
 
-/*if (is_correct_password($name, $pw)) {
+if (is_correct_password($name, $pw)) {
 	# redirect?
 	session_start();
 	$_SESSION["name"] = $name;
-	header("Location: ../pages/home.php");
+    $_SESSION["checked"] = true;
+	//header("Location: ../pages/home.php");
+	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";
 	die();
 } else {
-	header("Location: ../pages/signin.html");
+	//header("Location: ../pages/signin.html");
+	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！Please try again"."\"".")".";"."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
 }
 
 // query database to see if user typed the right password
-/*function is_correct_password($name, $pw) {
+function is_correct_password($name, $pw) {
 	$db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$rows = $db->query("SELECT Password FROM userinfo WHERE Username = '$name'");
@@ -58,7 +48,7 @@ if($result=mysqli_fetch_array($query)){
 		}
 	}
 	return FALSE;
-}*/
+}
 
 
 
