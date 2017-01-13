@@ -28,12 +28,12 @@ if($_SESSION['checked']=="" || $_SESSION['checked']==0){
             <li><a href="home.php">Home</a></li>
             <li><a href="mysnippets.php">My Snippets</a></li>
             <li><a href="#">New Snippets</a></li>
-            <li><a href="upload.html">Upload</a></li>
+            <li><a href="upload.php">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
             <li><a href="editprofile.php">Profile</a></li>
-            <li><a href="../index.html">Sign out</a></li>
+            <li><a href="../index.php">Sign out</a></li>
         </ul>
     </div>
 </nav>

@@ -1,9 +1,6 @@
 <?php
 session_start();
 $name=$_SESSION['name'];
-if($_SESSION['checked']=="" || $_SESSION['checked']==0){
-    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
-}
 $ID=$_POST['deleteid'];
 
 $connect=mysqli_connect("localhost","root","123456fxf");
