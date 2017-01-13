@@ -25,7 +25,6 @@ if (is_correct_password($name, $pw)) {
 	# redirect?
 	session_start();
 	$_SESSION["name"] = $name;
-	$_SESSION['allsnippet']='';
 	header("Location: ../pages/home.php");
 	die();
 } else {
