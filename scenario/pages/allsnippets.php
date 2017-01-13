@@ -37,10 +37,66 @@ session_start();
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); 
     session_start();
     $thisname=$_SESSION['allsnippet'];
-    ?>
-    <p><?php echo $thisname;  ?></p>
+    $query="SELECT snippets,ID FROM Snippets WHERE Username='$thisname' ";
 
+
+
+    $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $rows = $db->query($query);
+    foreach ($rows as $row) {
+        ?>
+    
+
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <p>
+                        Snippet ID:
+                        <?=$row["ID"] ?>
+                    </p>
+
+                    <p>
+                        <?= $row["snippets"] ?>
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a href='#deletebutton'>Delete </a>
+                    
+                </div>
+            </div
+</div>
+
+        </div>
+    </div>
+    <?php
+}
     ?>
+<!-- 结束php -->
+<div class="row">
+        <div class="col s12 m12">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+<div id="deletebutton">  
+    <form method="post" action="../php/delete.php">
+    <p>Input the ID of snippet you want to delete</p>
+    <input type="text" name="deleteid"><br>
+    <input type="submit" name="submit" value="Delete" style="color:red " >
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+
+<!-- 结束form
+     -->
+</div>
+
+
+    
 </div>
 
 
