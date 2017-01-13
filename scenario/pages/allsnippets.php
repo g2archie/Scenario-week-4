@@ -31,27 +31,29 @@ session_start();
 
 <div class="container">
     <h4> <?php echo $_SESSION['allsnippet'];?>  Snippets:</h4> 
+
     <?php
-    session_start();
-    $name=$_SESSION["allsnippet"];
+    // $name=$_SESSION["allsnippet"];
     $connect=mysqli_connect("localhost","root","123456fxf");
-    mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
-    $query="SELECT snippets FROM Snippets WHERE Username='$name' ";
-    $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $rows = $db->query($query);
-    foreach ($rows as $row) {
-        ?>
-        <p>$row[0]</p>
-        <?php
-    }
+    mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
 
+    $query = "SELECT * FROM Snippets WHERE Username='wwt' ";
+            $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $rows = $db->query($query);
+            foreach ($rows as $row ) {
+                ?>
+                <p>
+                <?=$row['Username'] ?>;
+                </p>
+            }
 
-
-
-
+<?php
+}
 
     ?>
+
+
 
 
 
