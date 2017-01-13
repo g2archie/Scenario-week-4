@@ -38,13 +38,13 @@ session_start();
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
     $newname2=$_SESSION['allsnippet'];
     $newname3=$_SESSION['name'];
-    echo $newname3;
+    echo $newname2;
 
     // $query = "SELECT * FROM Snippets WHERE Username='wwt' ";
     // $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
     // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $rows = $db->query($query);
-    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname2' ");
+    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname3' ");
     foreach ($rows as $row ) {
             ?>
             <p>
