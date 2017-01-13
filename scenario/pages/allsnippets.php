@@ -45,7 +45,7 @@ $newname=$_SESSION['allsnippet'];
     // $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
     // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $rows = $db->query($query);
-    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname3' ");
+    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname2' ");
     foreach ($rows as $row ) {
             ?>
             <p>
