@@ -71,14 +71,18 @@ foreach ($rows as $row) {
                 <div class="card-action">
 
                     <form method="post" action="../php/url.php">
+                    <div class="btn">
                     <button name="name"  type="submit" value="<?=$row['Username']?>">Homepage</button></br>
+                    </div>
                     </form>
 
 
 
 
                     <form method="post" action="../php/showsnippet.php">
+                    <div class="btn">
                     <button name="Username"  type="submit" value="<?=$row['Username']?>">All Snippets</button>
+                    </div>
                     </form>
 
                 </div>
