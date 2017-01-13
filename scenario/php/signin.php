@@ -14,10 +14,13 @@ if($result=mysqli_fetch_array($query)){
        //echo '<pre>',print_r($userinfo, 1),'</pre>';
 	session_start();
 	$_SESSION["name"] = $name;
-	header("Location: ../pages/home.php");
+	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";
+	//header("Location: ../pages/home.php");
 	die();
 	} else {
-		echo "用户名不存在或密码错误！";
+		echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！"."\"".")".";"."</script>";
+	        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/login.html"."\""."</script>";
 	//header("Location: ../pages/signin.html");
 }
 // 检测用户名及密码是否正确
