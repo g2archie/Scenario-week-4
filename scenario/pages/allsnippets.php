@@ -33,7 +33,7 @@ session_start();
     <h4> <?php echo $_SESSION['allsnippet'];?>  Snippets:</h4> 
 
     <?php
-    // $name=$_SESSION["allsnippet"];
+    $name=$_SESSION["allsnippet"];
     $connect=mysqli_connect("localhost","root","123456fxf");
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
 
