@@ -30,11 +30,12 @@ session_start();
 
 
 <div class="container">
-    <h4> <?php echo $_SESSION['allsnippet'];?>  Snippets:</h4> 
+    <h4> 
+    <?php echo $_SESSION['allsnippet'];?>  Snippets:</h4> 
 
     <?php
     session_start();
-    $name=$_SESSION['allsnippet'];
+    $newname=$_SESSION['allsnippet'];
     $connect=mysqli_connect("localhost","root","123456fxf");
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
 
@@ -42,7 +43,7 @@ session_start();
     // $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
     // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $rows = $db->query($query);
-    $rows=mysqli_query($connect,"select * from Snippets where Username='$name' ");
+    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname' ");
     foreach ($rows as $row ) {
             ?>
             <p>
