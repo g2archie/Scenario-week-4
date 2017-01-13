@@ -58,15 +58,16 @@ session_start();
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                     <p>
-                        <?= $row["snippets"] ?>
-                    </p>
-                    <p>
                         Snippet ID:
                         <?=$row["ID"] ?>
                     </p>
+
+                    <p>
+                        <?= $row["snippets"] ?>
+                    </p>
                 </div>
                 <div class="card-action">
-                    <a href='#'>Delete </a>
+                    <a href='#deletebutton'>Delete </a>
                     
                 </div>
             </div
@@ -77,6 +78,17 @@ session_start();
     <?php
 }
     ?>
+
+<div id="deletebutton">  //Delete Button section
+    <form method="Post" action="../php/delete.php">
+    <p>Input the ID of snippet you want to delete</p>
+    <input type="text" name="deleteid"><br>
+    <p>Confirm</p>
+    <input type="submit" name="submit" value="Delete">
+    </form>
+</div>
+
+
 </div> 
 
 </body>
