@@ -11,9 +11,14 @@ $snippet=$_POST['snippet'];
 
 
 <script type="  text/javascript  ">
-var str ="<?php echo $snippet?>"
+var  lol
+lol=document.getElementByIdx_x("snippet").value;
+
+ 
+
+alert (lol);
   function htmlEscape(str) {
-      return str
+      return lol
           .replace(/&/g, '&amp;')
           .replace(/"/g, '&quot;')
           .replace(/'/g, '&#39;')
