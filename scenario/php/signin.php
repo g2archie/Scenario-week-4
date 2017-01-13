@@ -4,7 +4,6 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 
 $_SESSION["checked"] = false;
-echo $_SESSION["checked"];
 $name = $_POST["user_name"];
 $pw = md5($_POST["password"]);
 

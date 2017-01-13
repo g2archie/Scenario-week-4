@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['checked']=="" || $_SESSION['checked']=="false"){
+if($_SESSION['checked']=="" || $_SESSION['checked']==false){
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
 }
 $name=$_SESSION['name'];
