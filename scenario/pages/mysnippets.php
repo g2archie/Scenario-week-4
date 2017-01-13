@@ -87,7 +87,7 @@ session_start();
     <form method="post" action="../php/delete.php">
     <p>Input the ID of snippet you want to delete</p>
     <input type="text" name="deleteid"><br>
-    <input type="submit" name="submit" value="Delete">
+    <input type="submit" name="submit" value="Delete" style="color:red " >
     </form>
 </div>
 </div>
@@ -96,8 +96,8 @@ session_start();
 </div>
 </div> 
 
-
-    
+<!-- 结束form
+     -->
 </div>
 </body>
 </html>
