@@ -8,7 +8,6 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 mysqli_query($connect,"DELETE FROM `Snippets` WHERE Username='$name' AND ID='$ID' "); //
 
-
 header('Location:../pages/mysnippets.php');
 // echo $name; for testing the pass of data
 // echo $ID;
