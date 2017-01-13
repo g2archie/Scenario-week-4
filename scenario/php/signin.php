@@ -6,12 +6,12 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 $name = $_POST["user_name"];
 $pw = $_POST["password"];
-$sql = "SELECT Username FROM userinfo WHERE username='{$name}' AND password='{$pw}'";
+$sql = "SELECT Username FROM userinfo WHERE Username='{$name}' AND Password='{$pw}'";
 $query = mysqli_query($connect,$sql);
-$userinfo = mysqli_fetch_array($query, MYSQL_ASSOC);
-if(!empty($userinfo)){
+//$userinfo = mysqli_fetch_array($query, MYSQL_ASSOC);
+if($result=mysqli_fetch_array($query)){
 		//登录成功，打印出会员信息
-       echo '<pre>',print_r($userinfo, 1),'</pre>';
+       //echo '<pre>',print_r($userinfo, 1),'</pre>';
 	session_start();
 	$_SESSION["name"] = $name;
 	header("Location: ../pages/home.php");
@@ -19,7 +19,7 @@ if(!empty($userinfo)){
 	} else {
 		echo "用户名不存在或密码错误！";
 	header("Location: ../pages/signin.html");
-	}
+}
 // 检测用户名及密码是否正确
 // $check_query = mysql_query("select Username from userinfo where username='$username' and password='$password' limit 1");
 // if($result = mysql_fetch_array($check_query)){
