@@ -65,12 +65,19 @@ foreach ($rows as $row) {
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                     <img style="height: 5%; width: 5%" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png"/>
-                    <span class="card-title"> <?=$row['Username'] ?>   </span>
+                     <span class="card-title"> <?=$row['Username'] ?>   </span>    
                    
                 </div>
                 <div class="card-action">
-                    <a href="allsnippets.html">All snippets</a>
-                    <a href="#">Homepage</a>
+
+                    <a href="#">Homepage</a><br>
+
+                    <form method="post" action="showsnippet.php">
+                    <button name="Username" value="$row['Username']">All Snippets</button>
+                    </form>
+
+
+
                 </div>
 
             </div>           
