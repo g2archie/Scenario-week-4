@@ -1,5 +1,6 @@
 <?php
 session_start();
+$newname=$_SESSION['allsnippet'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,45 +28,39 @@ session_start();
     </div>
 </nav>
 
+
+
 <div class="container">
-    <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets:</h4>
-    <?php 
-    $connect=mysqli_connect("localhost","root","123456fxf");
-    mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); 
-    session_start();
-    $name=$_SESSION['allsnippet'];
-    $query="SELECT snippets,ID FROM Snippets WHERE Username='$name' ";
-    $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $rows = $db->query($query);
-    foreach ($rows as $row) {
-        ?>
-    
+   <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets</h4>
 
-    <div class="row">
-        <div class="col s12 m12">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <p>
-                        Snippet ID:
-                        <?=$row["ID"] ?>
-                    </p>
-
-                    <p>
-                        <?= $row["snippets"] ?>
-                    </p>
-                </div>
-                
-            </div>
-    </div>
-
-        </div>
-    </div>
     <?php
-}
+    // session_start();
+    $newname2=$_SESSION['name'];
+    $connect=mysqli_connect("localhost","root","123456fxf");
+    mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
+
+    // $query = "SELECT * FROM Snippets WHERE Username='wwt' ";
+    // $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
+    // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // $rows = $db->query($query);
+    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname2' ");
+    foreach ($rows as $row ) {
+            ?>
+            <p>
+            <?php echo $_SESSION['allsnippet'];  ?>
+            </p>
+            
+
+        <?php
+        }
+
     ?>
 
 
 
+
+
+
+</div>
 </body>
 </html>
