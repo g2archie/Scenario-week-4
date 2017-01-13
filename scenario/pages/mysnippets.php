@@ -45,7 +45,7 @@ session_start();
 
     session_start();
     $name=$_SESSION['name'];
-    $query="SELECT snippets FROM Snippets WHERE Username='$name' ";
+    $query="SELECT snippets,ID FROM Snippets WHERE Username='$name' ";
     $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $rows = $db->query($query);
@@ -59,6 +59,10 @@ session_start();
                 <div class="card-content white-text">
                     <p>
                         <?= $row["snippets"] ?>
+                    </p>
+                    <p>
+                        Snippet ID:
+                        <?=$row["ID"] ?>
                     </p>
                 </div>
                 <div class="card-action">
