@@ -34,13 +34,14 @@ session_start();
     <?php
     session_start();
     $name=$_SESSION["allsnippet"];
-    $query="SELECT snippets FROM Snippets WHERE Username='$name' ";
+    // $query="SELECT snippets FROM Snippets WHERE Username='$name' ";
+    $query="SELECT * FROM Snippets WHERE Username='$name' ";
     $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $rows = $db->query($query);
     foreach ($rows as $row) {
         ?>
-        <p>$row["snippets"]</p>
+        <p>$row[0]</p>
         <?php
     }
 
