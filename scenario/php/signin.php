@@ -5,7 +5,7 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 
 $name = $_POST["user_name"];
-$pw = $_POST["password"];
+$pw = md5($_POST["password"]);
 
 
 // 检测用户名及密码是否正确
