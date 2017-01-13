@@ -11,24 +11,7 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 $snippet=$_POST['snippet'];
 
-<script type="  text/javascript  ">
 
-
-var str ="<?php echo $snippet?>" 
-function html_encode(str)  
-{  
-  if(str.length == 0)return"";  
-  s = str.replace(/&/g,"&amp;"); 
-  s = s.replace(/</g,"&lt;");  
-  s = s.replace(/>/g,"&gt;");  
-  s = s.replace(/ /g,"&nbsp;");  
-  s = s.replace(/\'/g,"&#39;");  
-  s = s.replace(/\"/g, "&quot;");  
-  s = s.replace(/\n/g, "<br>");  
-  return s;  
-}  
-
-</script>
 
 $query="SELECT Num FROM num_for_id WHERE Username='$name' ";
 $result=mysqli_query($connect,$query)or die(mysqli_error());
