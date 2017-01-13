@@ -1,3 +1,20 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @Honghuiyu
+ Watch 3
+  Star 0
+  Fork 1 g2archie/Scenario-week-4
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathScenario-week-4/scenario/pages/editprofile.php
+8964eda  22 hours ago
+ harrychen0702 add my snippets
+0 contributors
+RawBlameHistory     
+77 lines (73 sloc)  3.59 KB
 <?php
 session_start();
  ?> 
@@ -21,11 +38,12 @@ session_start();
     <div class="nav-wrapper">
         <ul class="left hide-on-med-and-down">
             <li><a href="home.php">Home</a></li>
-            <li><a href="mysnippets.html">My Snippets</a></li>
-            <li><a href="newsnippet.html">New Snippets</a></li>
+            <li><a href="mysnippets.php">My Snippets</a></li>
+            <li><a href="newsnippet.php">New Snippets</a></li>
             <li><a href="upload.html">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
+            <li><span><?php echo $_SESSION['name'];  ?>  </span></li>
             <li><a href="#">Profile</a></li>
             <li><a href="../index.html">Sign out</a></li>
         </ul>
