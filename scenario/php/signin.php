@@ -20,7 +20,7 @@ if($result=mysqli_fetch_array($query)){
 	die();
 	} else {
 		echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！"."\"".")".";"."</script>";
-	        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/login.html"."\""."</script>";
+	        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
 	//header("Location: ../pages/signin.html");
 }
 // 检测用户名及密码是否正确
