@@ -7,7 +7,7 @@ foreach ($rows as $row ) {
 	$url=$row['homepage_url'];
 }
 
-header('Location:$url');
+header($url);
 // exit();
 
 ?>
