@@ -72,7 +72,7 @@ foreach ($rows as $row) {
 
                     <form method="post" action="../php/url.php">
                     
-                    <button class="btn" name="name"  type="submit" value="<?=$row['Username']?>">Homepage  </button></br>
+                    <button class="btn" name="name"  type="submit" value="<?=$row['Username']?>">  Homepage  </button></br>
               
                     </form>
                     </br>
