@@ -12,10 +12,10 @@ $sql2= "SELECT Username FROM userinfo WHERE Username='$name'";
 $result=mysqli_query($connect,$sql2); 
 $num=mysqli_num_rows($result); 
 if($num > 0){    
-   echo "<script type='text/javascript'>alert('用户名已存在');location='javascript:history.back()';</script>";    
+   echo "<script type='text/javascript'>alert('Username Already exsits!');location='javascript:history.back()';</script>";    
 }else{    
 mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('name','password')"); //将信息添加到userinfo这个表
-   echo "<script type='text/javascript'>alert('注册成功');</script>";
+   echo "<script type='text/javascript'>alert('Registration Successful');</script>";
    header('Location:../pages/signin.html');
 }
 // $result = mysql_query("SELECT * FROM userinfo");  //显示所有数据
