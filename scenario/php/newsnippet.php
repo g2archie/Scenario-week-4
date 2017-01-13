@@ -11,6 +11,8 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 $snippet=$_POST['snippet'];
 
+
+
 $query="SELECT Num FROM num_for_id WHERE Username='$name' ";
 $result=mysqli_query($connect,$query)or die(mysqli_error());
 $row=mysqli_fetch_row($result);
@@ -26,3 +28,6 @@ header('Location:../pages/mysnippets.php');
 
 
 ?>
+?>
+
+>>>>>>> origin/buggedversion
