@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['checked']=="" || $_SESSION['checked']==false){
+if($_SESSION['checked']=="" || $_SESSION['checked']==0){
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
 }
 $name=$_SESSION['name'];
@@ -26,22 +26,3 @@ header('Location:../pages/mysnippets.php');
 
 
 ?>
-<script type="  text/javascript  ">
-
-
-var str ="<?php echo $snippet?>"
-function html_encode(str)
-{
-  if(str.length == 0)return"";
-  s = str.replace(/&/g,"&amp;");
-  s = s.replace(/</g,"&lt;");
-  s = s.replace(/>/g,"&gt;");
-  s = s.replace(/ /g,"&nbsp;");
-  s = s.replace(/\'/g,"&#39;");
-  s = s.replace(/\"/g, "&quot;");
-  s = s.replace(/\n/g, "<br>");
-  return s;
-}
-
-</script>
-
