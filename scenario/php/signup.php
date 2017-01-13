@@ -6,7 +6,6 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 // $query1="INSERT INTO userinfo (Username, Password) VALUES ('allen','123')";
 
 // $result=mysql_query($query1) or die('sql错误'.mysql_error());
-$_SESSION["checked"] = 0;
 $name=$_POST[user_name];
 $password=md5($_POST[password]);
 $sql2= "SELECT Username FROM userinfo WHERE Username='$name'";
