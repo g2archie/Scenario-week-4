@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +28,7 @@
 </nav>
 
 <div class="container">
-    <h4>allen's Snippets:</h4>
+    <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets:</h4>
     <div class="row">
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
