@@ -79,17 +79,22 @@ session_start();
 }
     ?>
 
+</div> 
+
+
 <div id="deletebutton">  
-    <form method="Post" action="../php/delete.php">
+    <form method="post" action="../php/delete.php">
     <p>Input the ID of snippet you want to delete</p>
     <input type="text" name="deleteid"><br>
     <p>Confirm</p>
     <input type="submit" name="submit" value="Delete">
     </form>
 </div>
-
-
-</div> 
-
 </body>
 </html>
+
+
+
+
+
+
