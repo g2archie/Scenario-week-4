@@ -20,20 +20,19 @@ session_start();
     <div class="nav-wrapper">
         <ul class="left hide-on-med-and-down">
             <li><a href="#">Home</a></li>
-            <li><a href="mysnippets.html">My Snippets</a></li>
-            <li><a href="newsnippet.html">New Snippets</a></li>
+            <li><a href="mysnippets.php">My Snippets</a></li>
+            <li><a href="newsnippet.php">New Snippets</a></li>
             <li><a href="upload.html">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li><span><?php echo $_SESSION['name'];  ?>     </span></li> 
+            <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
             <li><a href="editprofile.php">Profile</a></li>
             <li><a href="../index.html">Sign out</a></li>
         </ul>
     </div>
 </nav>
 
-
-<div class="container">
+<!-- 
     <div class="row">
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
@@ -46,45 +45,51 @@ session_start();
                     <a href="allsnippets.html">All snippets</a>
                     <a href="#">Homepage</a>
                 </div>
-            </div>
+            </div>           
+        </div>
+    </div> -->
 
+<div class="container">
+    
+<?php
+$connect=mysqli_connect("localhost","root","123456fxf");
+    mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); 
+$query="SELECT DISTINCT Username FROM Snippets" ;
+$db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$rows = $db->query($query);
+foreach ($rows as $row) {
+    ?>  
+    <div class="row">
+        <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                     <img style="height: 5%; width: 5%" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png"/>
-                    <span class="card-title">Harry</span>
-                    <p>Ken is cooler.</p>
+                     <span class="card-title"> <?=$row['Username'] ?>   </span>    
+                   
                 </div>
-                <div class="card-action">
-                    <a href="allsnippets.html">All snippets</a>
-                    <a href="#">Homepage</a>
-                </div>
-            </div>
 
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <img style="height: 5%; width: 5%" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png"/>
-                    <span class="card-title">Archie</span>
-                    <p>Harry is coolest.</p>
-                </div>
                 <div class="card-action">
-                    <a href="allsnippets.html">All snippets</a>
-                    <a href="#">Homepage</a>
-                </div>
-            </div>
 
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <img style="height: 5%; width: 5%" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png"/>
-                    <span class="card-title">Ken</span>
-                    <p>I agree with Archie.</p>
+                    <a href="#">Homepage</a><br>
+
+                    <form method="post" action="../php/showsnippet.php">
+                    <button name="Username"  type="submit" value=" <?=$row['Username'] ?>">All Snippets</button>
+                    </form>
+
                 </div>
-                <div class="card-action">
-                    <a href="allsnippets.html">All snippets</a>
-                    <a href="#">Homepage</a>
-                </div>
-            </div>
+
+            </div>           
         </div>
     </div>
+    <?php
+}
+?>
+
+
+
 </div>
+
+
 </body>
 </html>
