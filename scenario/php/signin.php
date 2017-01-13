@@ -19,7 +19,7 @@ if($result=mysqli_fetch_array($query)){
 	//header("Location: ../pages/home.php");
 	die();
 	} else {
-		echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！"."\"".")".";"."</script>";
+		echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！Please try again"."\"".")".";"."</script>";
 	        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
 	//header("Location: ../pages/signin.html");
 }
