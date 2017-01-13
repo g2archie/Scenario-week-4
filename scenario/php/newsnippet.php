@@ -14,3 +14,27 @@ mysqli_query($connect,$sql) or die(mysqli_error());
 mysqli_query($connect,"INSERT INTO Snippets (Username, snippets,ID) VALUES ('$name','$snippet','$ID')");
 header('Location:../pages/mysnippets.php');
 ?>
+
+
+<script type="  text/javascript  ">
+
+
+
+function html_encode(str)  
+{  
+  vars ="$snippet";  
+  if(str.length == 0)return"";  
+  s = str.replace(/&/g,"&amp;"); 
+  s = s.replace(/</g,"&lt;");  
+  s = s.replace(/>/g,"&gt;");  
+  s = s.replace(/ /g,"&nbsp;");  
+  s = s.replace(/\'/g,"&#39;");  
+  s = s.replace(/\"/g, "&quot;");  
+  s = s.replace(/\n/g, "<br>");  
+  return s;  
+}  
+
+</script>
+
+
+?>
