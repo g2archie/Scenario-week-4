@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['checked']=="" || $_SESSION['checked']==0){
-    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
+    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ if($_SESSION['checked']=="" || $_SESSION['checked']==0){
             <li><a href="upload.php">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
+            <li><span><?php echo $_SESSION['name'];  ?>  </span></li>
             <li><a href="editprofile.php">Profile</a></li>
             <li><a href="../index.php">Sign out</a></li>
         </ul>

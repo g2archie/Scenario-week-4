@@ -38,7 +38,7 @@ $_SESSION["checked"] = 0;
                         <p>Archie is cool.</p>
                     </div>
                     <div class="card-action">
-                        <a href="pages/allsnippets.html">All snippets</a>
+                        <a href="pages/allsnippets.php">All snippets</a>
                         <a href="#">Homepage</a>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ $_SESSION["checked"] = 0;
                         <p>Ken is cooler.</p>
                     </div>
                     <div class="card-action">
-                        <a href="/pages/allsnippets.html">All snippets</a>
+                        <a href="/pages/allsnippets.php">All snippets</a>
                         <a href="#">Homepage</a>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ $_SESSION["checked"] = 0;
                         <p>Harry is coolest.</p>
                     </div>
                     <div class="card-action">
-                        <a href="/pages/allsnippets.html">All snippets</a>
+                        <a href="/pages/allsnippets.php">All snippets</a>
                         <a href="#">Homepage</a>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ $_SESSION["checked"] = 0;
                         <p>I agree with Archie.</p>
                     </div>
                     <div class="card-action">
-                        <a href="/pages/allsnippets.html">All snippets</a>
+                        <a href="/pages/allsnippets.php">All snippets</a>
                         <a href="#">Homepage</a>
                     </div>
                 </div>
