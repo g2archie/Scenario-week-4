@@ -3,6 +3,7 @@ session_start();
 if($_SESSION['checked']=="" || $_SESSION['checked']=="false"){
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
 }
+
 if(time() - $_SESSION['timestamp'] > 60) { //subtract new timestamp from the old one
     echo"<script>alert('1 Minute over!');</script>";
     unset($_SESSION['name'], $_SESSION['allsnippet'], $_SESSION['timestamp']);
