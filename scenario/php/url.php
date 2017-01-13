@@ -1,6 +1,7 @@
 <?php
-$url=$_POST['Homepage'];
-header('Location:$url');
-exit();
+$name=$_POST['Homepage'];
+echo $name;
+// header('Location:$url');
+// exit();
 
 ?>
