@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 if(time() - $_SESSION['timestamp'] > 60) { //subtract new timestamp from the old one
     echo"<script>alert('1 Minute over!');</script>";
     unset($_SESSION['name'], $_SESSION['allsnippet'], $_SESSION['timestamp']);
@@ -7,6 +8,10 @@ if(time() - $_SESSION['timestamp'] > 60) { //subtract new timestamp from the old
     exit;
 } else {
     $_SESSION['timestamp'] = time(); //set new timestamp
+=======
+if($_SESSION['checked']=="" || $_SESSION['checked']=="false"){
+    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
+>>>>>>> master
 }
 ?>
 
@@ -34,7 +39,7 @@ if(time() - $_SESSION['timestamp'] > 60) { //subtract new timestamp from the old
             <li><a href="home.php">Home</a></li>
             <li><a href="mysnippets.php">My Snippets</a></li>
             <li><a href="#">New Snippets</a></li>
-            <li><a href="upload.html">Upload</a></li>
+            <li><a href="upload.php">Upload</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
