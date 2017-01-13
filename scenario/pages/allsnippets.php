@@ -46,11 +46,8 @@ session_start();
     $rows=mysqli_query($connect,"select * from Snippets where Username='$newname2' ");
     foreach ($rows as $row ) {
             ?>
-            <p>
-            <?php echo $newname2;  ?>
-            </p>
+            <p><?= $row["snippets"] ?></p>
             
-
         <?php
         }
 
