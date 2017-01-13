@@ -44,9 +44,9 @@ session_start();
             foreach ($rows as $row ) {
                 ?>
                 <p>
-                <?=$row['Username'] ?>;
+                <?=$row['Username'] ?>
                 </p>
-            }
+            
 
 <?php
 }
