@@ -82,6 +82,10 @@ session_start();
 </div> 
 
 
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
 <div id="deletebutton">  
     <form method="post" action="../php/delete.php">
     <p>Input the ID of snippet you want to delete</p>
@@ -89,6 +93,10 @@ session_start();
     <p>Confirm</p>
     <input type="submit" name="submit" value="Delete">
     </form>
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>
