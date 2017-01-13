@@ -18,7 +18,7 @@ if($result=mysqli_fetch_array($query)){
 	die();
 	} else {
 		echo "用户名不存在或密码错误！";
-	header("Location: ../pages/signin.html");
+	//header("Location: ../pages/signin.html");
 }
 // 检测用户名及密码是否正确
 // $check_query = mysql_query("select Username from userinfo where username='$username' and password='$password' limit 1");
