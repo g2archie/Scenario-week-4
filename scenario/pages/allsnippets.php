@@ -45,8 +45,7 @@ session_start();
     foreach ($rows as $row ) {
             ?>
             <p>
-            <?=$row['Username'] ?>
-            <?=$name ?> 
+            123
             </p>
             
 
