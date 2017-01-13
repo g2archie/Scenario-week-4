@@ -79,10 +79,7 @@ session_start();
 }
     ?>
 <!-- 结束php -->
-</div> 
-
-
-    <div class="row">
+<div class="row">
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
@@ -97,6 +94,11 @@ session_start();
 </div>
 </div>
 </div>
+</div>
+</div> 
+
+
+    
 </div>
 </body>
 </html>
