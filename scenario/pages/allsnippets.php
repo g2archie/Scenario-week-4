@@ -42,7 +42,7 @@ session_start();
     // $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
     // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $rows = $db->query($query);
-    $rows=mysqli_query($connect,"select * from Snippets where Username='$name' ");
+    $rows=mysqli_query($connect,"select * from Snippets where Username=$name ");
     foreach ($rows as $row ) {
             ?>
             <p>
