@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION["checked"] = 0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,50 +11,53 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 </head>
+
 <body>
 <nav>
     <div class="nav-wrapper">
-        <a  href="home.php" class="brand-logo">Home</a>
+        <ul class="left hide-on-med-and-down">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="mysnippets.php">My Snippets</a></li>
+            <li><a href="newsnippet.php">New Snippets</a></li>
+            <li><a href="#">Upload</a></li>
+        </ul>
         <ul class="right hide-on-med-and-down">
-            <li><a href="signin.html">Sign in</a></li>
-            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="editprofile.php">Profile</a></li>
+            <li><a href="../php/logout.php">Sign out</a></li>
         </ul>
     </div>
 </nav>
 
-<form method="post" action="../php/signup.php">   <!-- 表单 -->
 <div class="container">
     <div class="row">
         <div class="col s12 m12">
             <div class="card">
                 <div class="card-content">
-                    <span class="card-title">Sign Up</span>
-                    <p>Sign up for a new account:</p>                  
-                     <form method="post" action="../php/signup.php">   <!-- 表单 -->
-                      <div class="row">
-                        <div class="input-field col s12">
-                            <input id="user_name" type="text" class="validate" name="user_name" > <!-- 用户名 -->
-                            <label for="user_name">User name:</label>
+                    <span>Select a file to upload to your account:</span>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
                         </div>
-                        <div class="input-field col s12">
-                            <input id="password" type="password" class="validate" name="password"> <!-- 密码 -->
-                            <label for="password">Password:</label>
-                        </div>
-                    
-                      </div>
                 </div>
                 <div class="card-action">
-                    <input type="submit" value="Create Account" name="submit">
+                    <a href="#">Upload</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</form>
+
 </body>
 </html>
