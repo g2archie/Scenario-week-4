@@ -6,8 +6,8 @@ $rows=mysqli_query($connect,"select * from userinfo where Username='$name' ");
 foreach ($rows as $row ) {
 	$url=$row['homepage_url'];
 }
-echo $url;
-// header('Location:$url');
+
+header('Location:$url');
 // exit();
 
 ?>
