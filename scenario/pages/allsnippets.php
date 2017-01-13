@@ -27,8 +27,12 @@ session_start();
     </div>
 </nav>
 
+<!-- <div class="container">
+    <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets:</h4> -->
+
 <div class="container">
-    <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets:</h4>
+    <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets:</h4> 
+    <!-- 开始传入数据 -->
     <?php 
     $connect=mysqli_connect("localhost","root","123456fxf");
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); 
@@ -56,16 +60,39 @@ session_start();
                         <?= $row["snippets"] ?>
                     </p>
                 </div>
-                
-            </div>
-    </div>
+                <div class="card-action">
+                    <a href='#deletebutton'>Delete </a>
+                    
+                </div>
+            </div
+</div>
 
         </div>
     </div>
     <?php
 }
     ?>
+<!-- 结束php -->
+<div class="row">
+        <div class="col s12 m12">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+<div id="deletebutton">  
+    <form method="post" action="../php/delete.php">
+    <p>Input the ID of snippet you want to delete</p>
+    <input type="text" name="deleteid"><br>
+    <input type="submit" name="submit" value="Delete" style="color:red " >
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
 
+<!-- 结束form
+     -->
+</div>
 
 
 </body>
