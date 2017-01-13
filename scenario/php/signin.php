@@ -6,8 +6,19 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 $name = $_POST["user_name"];
 $pw = $_POST["password"];
-
-
+$sql = "SELECT Username FROM userinfo WHERE username='{$name}' AND password='{$pw}'";
+$query = mysqli_query($connect,$sql);
+if(!empty($userinfo)){
+		//登录成功，打印出会员信息
+       echo '<pre>',print_r($userinfo, 1),'</pre>';
+	session_start();
+	$_SESSION["name"] = $name;
+	header("Location: ../pages/home.php");
+	die();
+	} else {
+		echo "用户名不存在或密码错误！";
+	header("Location: ../pages/signin.html");
+	}
 // 检测用户名及密码是否正确
 // $check_query = mysql_query("select Username from userinfo where username='$username' and password='$password' limit 1");
 // if($result = mysql_fetch_array($check_query)){
@@ -21,7 +32,7 @@ $pw = $_POST["password"];
 // }
 
 
-if (is_correct_password($name, $pw)) {
+/*if (is_correct_password($name, $pw)) {
 	# redirect?
 	session_start();
 	$_SESSION["name"] = $name;
@@ -32,7 +43,7 @@ if (is_correct_password($name, $pw)) {
 }
 
 // query database to see if user typed the right password
-function is_correct_password($name, $pw) {
+/*function is_correct_password($name, $pw) {
 	$db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$rows = $db->query("SELECT Password FROM userinfo WHERE Username = '$name'");
@@ -43,7 +54,7 @@ function is_correct_password($name, $pw) {
 		}
 	}
 	return FALSE;
-}
+}*/
 
 
 
