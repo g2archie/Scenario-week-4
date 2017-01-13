@@ -9,7 +9,7 @@ $ID=$_POST['deleteid'];
 
 $sql = "DELETE * FROM Snippets WHERE Username='$name' AND ID='$ID' ";
 mysqli_query($connect,$sql) or die(mysqli_error());
-header("Location:../pages/mysnippets.php");
+header('Location:../pages/mysnippets.php');
 
 
 ?>
