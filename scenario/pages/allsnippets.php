@@ -34,8 +34,10 @@ $newname=$_SESSION['allsnippet'];
    <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets</h4>
 
     <?php
-    // session_start();
+    session_start();
     $newname2=$_SESSION['allsnippet'];
+    $newname3=$_SESSION['name'];
+    echo $newname2;
     $connect=mysqli_connect("localhost","root","123456fxf");
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
 
@@ -43,7 +45,7 @@ $newname=$_SESSION['allsnippet'];
     // $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
     // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $rows = $db->query($query);
-    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname2' ");
+    $rows=mysqli_query($connect,"select * from Snippets where Username='$newname3' ");
     foreach ($rows as $row ) {
             ?>
             <p>
