@@ -79,7 +79,7 @@ session_start();
 }
     ?>
 
-<div id="deletebutton">  //Delete Button section
+<div id="deletebutton">  
     <form method="Post" action="../php/delete.php">
     <p>Input the ID of snippet you want to delete</p>
     <input type="text" name="deleteid"><br>
