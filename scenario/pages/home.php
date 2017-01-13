@@ -71,7 +71,7 @@ foreach ($rows as $row) {
                 <div class="card-action">
 
                     <form method="post" action="../php/url.php">
-                    <button name="Homepage"  type="submit" value="<?=$row['Username']?>">Homepage</button></br>
+                    <button name="name"  type="submit" value="<?=$row['Username']?>">Homepage</button></br>
                     </form>
 
 
