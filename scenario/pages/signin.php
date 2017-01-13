@@ -1,6 +1,8 @@
 <?php
     session_start();
     $_SESSION["checked"] = 0;
+    echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\"".$_SESSION["checked"]."\"".")".";"."</script>";
+
 ?>
 
 <!DOCTYPE html>
