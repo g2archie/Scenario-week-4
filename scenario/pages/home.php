@@ -68,15 +68,14 @@ foreach ($rows as $row) {
                      <span class="card-title"> <?=$row['Username'] ?>   </span>    
                    
                 </div>
+
                 <div class="card-action">
 
                     <a href="#">Homepage</a><br>
 
                     <form method="post" action="../php/showsnippet.php">
-                    <button name="Username" value="$row['Username']" type="submit">All Snippets</button>
+                    <button name="Username"  type="submit" value=" <?=$row['Username'] ?>">All Snippets</button>
                     </form>
-
-
 
                 </div>
 
