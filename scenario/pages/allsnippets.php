@@ -64,7 +64,7 @@ session_start();
                     <a href='#deletebutton'>Delete </a>
                     
                 </div>
-            </div
+            </div>
 </div>
 
         </div>
@@ -73,21 +73,7 @@ session_start();
 }
     ?>
 <!-- 结束php -->
-<div class="row">
-        <div class="col s12 m12">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-<div id="deletebutton">  
-    <form method="post" action="../php/delete.php">
-    <p>Input the ID of snippet you want to delete</p>
-    <input type="text" name="deleteid"><br>
-    <input type="submit" name="submit" value="Delete" style="color:red " >
-    </form>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 </div> 
 
 <!-- 结束form
