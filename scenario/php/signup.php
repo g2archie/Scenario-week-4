@@ -6,9 +6,18 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 // $query1="INSERT INTO userinfo (Username, Password) VALUES ('allen','123')";
 
 // $result=mysql_query($query1) or die('sql错误'.mysql_error());
-
-mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('$_POST[user_name]','$_POST[password]')"); //将信息添加到userinfo这个表
-
+$name=$_POST[user_name];
+$password=$_POST[passoword];
+$sql2= "SELECT Username FROM userinfo WHERE Username='$name'";
+$result=mysqli_query($connect,$sql2); 
+$num=mysqli_num_rows($result); 
+if($num > 0){    
+   echo "<script type='text/javascript'>alert('用户名已存在');location='javascript:history.back()';</script>";    
+}else{    
+mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('name','password')"); //将信息添加到userinfo这个表
+   echo "<script type='text/javascript'>alert('注册成功');</script>";
+   header('Location:../pages/signin.html');
+}
 // $result = mysql_query("SELECT * FROM userinfo");  //显示所有数据
 // while($row = mysql_fetch_array($result))
 //   {
@@ -18,7 +27,7 @@ mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('$_POST
 
 // echo "<br />";
 // echo "1 record added";
-header('Location:../pages/signin.html');
+
 
 mysqli_close($connect);
 
