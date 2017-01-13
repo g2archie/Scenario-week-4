@@ -19,7 +19,7 @@ mysqli_query($connect,$sql) or die(mysqli_error());
 
 
 mysqli_query($connect,"INSERT INTO Snippets (Username, snippets,ID) VALUES ('$name','$snippet','$ID')");
-header('Location:../pages/home.php');
+header('Location:../pages/mysnippets.php');
 
 
 ?>
