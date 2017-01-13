@@ -8,6 +8,7 @@ $name = $_POST["user_name"];
 $pw = $_POST["password"];
 $sql = "SELECT Username FROM userinfo WHERE username='{$name}' AND password='{$pw}'";
 $query = mysqli_query($connect,$sql);
+$userinfo = mysqli_fetch_array($query, MYSQL_ASSOC);
 if(!empty($userinfo)){
 		//登录成功，打印出会员信息
        echo '<pre>',print_r($userinfo, 1),'</pre>';
