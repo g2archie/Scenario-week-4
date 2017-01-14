@@ -3,7 +3,9 @@ session_start();
 $_SESSION['timestamp']=time();
 if(time() - $_SESSION['timestamp'] > 60) { //subtract new timestamp from the old one
     echo"<script>alert('1 Minutes over!');</script>";
-    header("Location:../php/logout.php"); //redirect to index.php
+    unset($_SESSION["name"]);
+    unset($_SESSION["allsnippet"]); // where $_SESSION["nome"] is your own variable. if you do not have one use only this as follow **session_unset();**
+    header("Location: ../pages/home.php");
     exit;
 }
 
