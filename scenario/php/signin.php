@@ -8,7 +8,7 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 $sql = "SELECT Username FROM userinfo WHERE Username='{$name}' AND Password='{$pw}'";
   $query = mysqli_query($connect,$sql);
  //$userinfo = mysqli_fetch_array($query, MYSQL_ASSOC);
-  if($result=mysqli_fetch_array($query)){
+  if($result==mysqli_fetch_array($query)){
   		//登录成功，打印出会员信息
            //echo '<pre>',print_r($userinfo, 1),'</pre>';
   	session_start();
