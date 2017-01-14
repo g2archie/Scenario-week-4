@@ -33,7 +33,7 @@ if (is_correct_password($name, $pw)) {
 } else {
 	//header("Location: ../pages/signin.html");
 	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！Please try again"."\"".")".";"."</script>";
-	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
+	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
 }
 
 // query database to see if user typed the right password
