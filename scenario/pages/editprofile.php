@@ -3,6 +3,17 @@ session_start();
 if($_SESSION['checked'] == "" || $_SESSION['checked']==0){
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
 }
+
+$inactive = 0.5;
+if( !isset($_SESSION['timeout']) )
+$_SESSION['timeout'] = time() + $inactive; 
+
+$session_life = time() - $_SESSION['timeout'];
+
+if($session_life > $inactive)
+{  session_destroy(); header("Location:../php/logout.php");  }
+
+$_SESSION['timeout']=time();
  ?> 
 <!DOCTYPE html>
 <html lang="en">
