@@ -33,7 +33,6 @@ if($_SESSION['checked'] == "" || $_SESSION['checked']==0){
         <ul class="right hide-on-med-and-down">
             <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
             <li><a href="editprofile.php">Profile</a></li>
-            <li><a href="signin.php">Sign in</a></li>
             <li><a href="../php/logout.php">Sign out</a></li>
         </ul>
     </div>
