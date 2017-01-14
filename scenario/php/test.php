@@ -9,7 +9,7 @@
 	// The value of the variable name is found
 	echo "<h1>Hello " . $url . "</h1>";
            echo    '<script type="text/javascript">'
-          .     "window.location.href='$url';"
+          .     "window.location.href='http://'++'$url';"
           . '</script>'
 	?>
 
