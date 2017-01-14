@@ -1,13 +1,5 @@
 <?php
 session_start();
-$_SESSION['timestamp']=time();
-if(time() - $_SESSION['timestamp'] > 20) { //subtract new timestamp from the old one
-    echo"<script>alert('1 Minutes over!');</script>";
-    unset($_SESSION["name"]);
-    unset($_SESSION["allsnippet"]); // where $_SESSION["nome"] is your own variable. if you do not have one use only this as follow **session_unset();**
-    header("Location: signin.php");
-    exit;
-}
 
 ?>
 
