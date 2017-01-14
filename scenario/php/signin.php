@@ -13,11 +13,15 @@ $sql = "SELECT Username FROM userinfo WHERE Username='{$name}' AND Password='{$p
            //echo '<pre>',print_r($userinfo, 1),'</pre>';
   	session_start();
   	$_SESSION["name"] = $name;
-  	header("Location: ../pages/home.php");
+  	//header("Location: ../pages/home.php");
+	  echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
+ 	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";
   	die();
   	} else {
-  		echo "用户名不存在或密码错误！";
-  	header("Location: ../pages/signin.html");
+  		
+	  echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！"."\"".")".";"."</script>";
+ 	        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/sign.html"."\""."</script>";
+  	//header("Location: ../pages/signin.html");
   	}
   
 
