@@ -3,7 +3,7 @@ session_start();
 if($_SESSION['checked'] == "" || $_SESSION['checked']==0){
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
 }
-$inactive = 10;
+$inactive = 100;
 if( !isset($_SESSION['timeout']) )
 $_SESSION['timeout'] = time() + $inactive; 
 
