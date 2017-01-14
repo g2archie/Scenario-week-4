@@ -8,7 +8,9 @@
         $url=$_GET["url"];
 	// The value of the variable name is found
 	echo "<h1>Hello " . $url . "</h1>";
-        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."$url"."\""."</script>";
+           echo    '<script type="text/javascript">'
+          .     "window.location='$url';"
+          . '</script>'
 	?>
 
 	</body>
