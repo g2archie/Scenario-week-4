@@ -3,7 +3,7 @@ $connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 
 
-
+session_start();
 $name = $_POST["user_name"];
 $pw = md5($_POST["password"]);
 
@@ -25,6 +25,7 @@ if (is_correct_password($name, $pw)) {
 	# redirect?
 	session_start();
 	$_SESSION["name"] = $name;
+	$_SESSION["checked"] = 1;
 	//header("Location: ../pages/home.php");
 	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
 	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";

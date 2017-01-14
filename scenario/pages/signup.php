@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION("checked") = 0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +21,8 @@
     <div class="nav-wrapper">
         <a  href="home.php" class="brand-logo">Home</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="signin.html">Sign in</a></li>
-            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="signin.php">Sign in</a></li>
+            <li><a href="signup.php">Sign up</a></li>
         </ul>
     </div>
 </nav>
