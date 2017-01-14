@@ -30,6 +30,10 @@ else{
 	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Your password is wrong!"."\"".")".";"."</script>";
 	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/editprofile.php"."\""."</script>";
 }
+
+
+
+
 function is_correct_password($name, $oldpassword) {
 	$db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");  //修改
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -42,4 +46,7 @@ function is_correct_password($name, $oldpassword) {
 	}
 	return FALSE;
 }
+
+
+
 ?>
