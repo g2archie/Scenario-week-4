@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION("checked") = 0;
+    $_SESSION["checked"] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
