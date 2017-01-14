@@ -10,6 +10,7 @@ foreach ($rows as $row ) {
 else
 {
 	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."The user has not set his/her website yet!"."\"".")".";"."</script>";
+        header("Location:../pages/home.php")
 }
 exit();
 
