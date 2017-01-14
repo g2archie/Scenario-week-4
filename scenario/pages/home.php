@@ -1,6 +1,18 @@
 <?php
 session_start();
- ?>
+$_SESSION['timestamp']=time();
+if(time() - $_SESSION['timestamp'] > 60) { //subtract new timestamp from the old one
+    echo"<script>alert('1 Minutes over!');</script>";
+    // unset($_SESSION['username'], $_SESSION['password'], $_SESSION['timestamp']);
+    // $_SESSION['logged_in'] = false;
+    header("Location:../php/logout.php"); //redirect to index.php
+    exit;
+} else {
+    $_SESSION['timestamp'] = time(); //set new timestamp
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
