@@ -18,7 +18,7 @@ mysqli_query($connect,"INSERT INTO userinfo (Username, Password) VALUES ('$name'
 mysqli_query($connect,"INSERT INTO num_for_id (Username, Num) VALUES ('$_POST[user_name]','0') ");
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/return.html"."\""."</script>";
    //echo "<script type='text/javascript'>alert('Registration Successful');</script>";
-   //header('Location:../pages/signin.php');
+   //header('Location:../pages/signin.html');
 }
 // $result = mysql_query("SELECT * FROM userinfo");  //显示所有数据
 // while($row = mysql_fetch_array($result))

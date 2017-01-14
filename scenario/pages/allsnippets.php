@@ -1,8 +1,5 @@
 <?php
 session_start();
-if($_SESSION['checked']=="" || $_SESSION['checked']=="false"){
-    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
