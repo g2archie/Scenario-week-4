@@ -11,7 +11,7 @@ $_SESSION['timeout'] = time() + $inactive;
 $session_life = time() - $_SESSION['timeout'];
 
 if($session_life > $inactive)
-{  session_destroy(); header("Location:../php/logout.php");     }
+{  session_destroy(); echo "success"; header("Location:../php/logout.php");   }
 
 $_SESSION['timeout']=time();
 ?>
