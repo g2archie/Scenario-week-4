@@ -32,7 +32,11 @@ if($_SESSION['checked']=="" || $_SESSION['checked']==0){
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><a href="editprofile.php">Profile</a></li>
+<<<<<<< HEAD:scenario/pages/upload.php
             <li><a href="../index.php">Sign out</a></li>
+=======
+            <li><a href="../php/logout.php">Sign out</a></li>
+>>>>>>> master:scenario/pages/upload.html
         </ul>
     </div>
 </nav>

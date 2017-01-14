@@ -1,9 +1,5 @@
 <?php
 session_start();
-$newname=$_SESSION['allsnippet'];
-if($_SESSION['checked']=="" || $_SESSION['checked']==0){
-    echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,13 +30,14 @@ if($_SESSION['checked']=="" || $_SESSION['checked']==0){
 
 
 <div class="container">
-   <h4><?php echo $_SESSION['allsnippet'];  ?> Snippets</h4>
+   <h4><?php echo $_SESSION['allsnippet'];  ?>'s Snippets</h4>
 
     <?php
-    // session_start();
-    $newname2=$_SESSION['name'];
+    session_start();
     $connect=mysqli_connect("localhost","root","123456fxf");
     mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //
+    $newname2=trim($_SESSION['allsnippet']);
+
 
     // $query = "SELECT * FROM Snippets WHERE Username='wwt' ";
     // $db = new PDO("mysql:dbname=Scenario4", "root", "123456fxf");
@@ -49,11 +46,20 @@ if($_SESSION['checked']=="" || $_SESSION['checked']==0){
     $rows=mysqli_query($connect,"select * from Snippets where Username='$newname2' ");
     foreach ($rows as $row ) {
             ?>
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
             <p>
-            <?php echo $_SESSION['allsnippet'];  ?>
-            </p>
-            
+                        Snippet ID:
+                        <?=$row["ID"] ?>
+                    </p>
+            <p><?= $row["snippets"] ?></p>
+           </div>
+            </div>
 
+        </div>
+    </div> 
         <?php
         }
 

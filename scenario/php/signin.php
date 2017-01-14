@@ -23,7 +23,10 @@ $pw = md5($_POST["password"]);
 if (is_correct_password($name, $pw)) {
 	# redirect?
 	$_SESSION["name"] = $name;
+<<<<<<< HEAD
     $_SESSION["checked"] = 1;
+=======
+>>>>>>> master
 	//header("Location: ../pages/home.php");
 	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
 	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";

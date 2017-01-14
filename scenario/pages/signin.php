@@ -20,7 +20,11 @@
 <body>
     <nav>
         <div class="nav-wrapper">
+<<<<<<< HEAD:scenario/pages/signin.php
             <a  href="../index.php" class="brand-logo">Home</a>
+=======
+            <a  href="home.php" class="brand-logo">Home</a>
+>>>>>>> master:scenario/pages/signin.html
             <ul class="right hide-on-med-and-down">
                 <li><a href="signin.php">Sign in</a></li>
                 <li><a href="signup.php">Sign up</a></li>

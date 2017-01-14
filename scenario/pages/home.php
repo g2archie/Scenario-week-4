@@ -1,9 +1,15 @@
 <?php
 session_start();
+<<<<<<< HEAD
 if($_SESSION['checked']=="" || $_SESSION['checked']==0){
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
 }
  ?>
+=======
+
+?>
+
+>>>>>>> master
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +31,21 @@ if($_SESSION['checked']=="" || $_SESSION['checked']==0){
             <li><a href="#">Home</a></li>
             <li><a href="mysnippets.php">My Snippets</a></li>
             <li><a href="newsnippet.php">New Snippets</a></li>
+<<<<<<< HEAD
             <li><a href="upload.php">Upload</a></li>
+=======
+            <li><a href="upload.html">Upload</a></li>
+>>>>>>> master
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
             <li><a href="editprofile.php">Profile</a></li>
+<<<<<<< HEAD
             <li><a href="../index.php">Sign out</a></li>
+=======
+            <li><a href="signin.html">Sign in</a></li>
+            <li><a href="../php/logout.php">Sign out</a></li>
+>>>>>>> master
         </ul>
     </div>
 </nav>
@@ -73,10 +88,28 @@ foreach ($rows as $row) {
 
                 <div class="card-action">
 
+<<<<<<< HEAD
                     <a href="#">Homepage</a><br>
 
                     <form method="post" action="../php/showsnippet.php">
                     <button name="Username"  type="submit" value=" <?=$row['Username'] ?>">All Snippets</button>
+=======
+                    <form method="post" action="../php/url.php">
+                    
+                    <button class="btn" name="name"  type="submit" value="<?=$row['Username']?>">  Homepage  </button></br>
+              
+                    </form>
+                    </br>
+
+
+
+
+
+                    <form method="post" action="../php/showsnippet.php">
+
+                    <button name="Username"  class="btn"  type="submit" value="<?=$row['Username']?>">All Snippets</button>
+
+>>>>>>> master
                     </form>
 
                 </div>
