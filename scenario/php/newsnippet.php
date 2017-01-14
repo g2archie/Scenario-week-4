@@ -22,7 +22,7 @@ mysqli_query($connect,$sql) or die(mysqli_error());
  
 
 
-mysqli_query($connect,"INSERT INTO Snippets (Username, snippets,ID) VALUES ('$name','$snippet','$ID')");
+mysqli_query($connect,"INSERT INTO Snippets (Username, snippets,ID) VALUES ('$name','$string','$ID')");
 header('Location:../pages/mysnippets.php');
 
 
