@@ -7,8 +7,8 @@ setcookie(”cookie”, $value, time()+3600);
 $connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 $name=$_SESSION['name'];
-$oldpassword=md5($_POST['oldpassword']);
-$newpassword=md5($_POST['newpassword']);
+$oldpassword=$_POST['oldpassword'];
+$newpassword= password_hash($_POST['newpassword'],PASSWORD_DEFAULT);
 $homepage_url=$_POST['homepage_url'];
 $private_snippet=$_POST['snippet'];
 if (is_correct_password($name,$oldpassword)) {
@@ -44,7 +44,7 @@ function is_correct_password($name, $oldpassword) {
 	$rows = $db->query("SELECT Password FROM userinfo WHERE Username ='$name' ");
 	foreach ($rows as $row) {
 		$correct_password = $row["Password"];
-		if ($oldpassword == $correct_password) {
+		if (password_verify($oldpassword, $correct_password)) {
 			return TRUE;
 		}
 	}
