@@ -5,7 +5,8 @@ $value = “DefenseSCRF”; //defence CSRF
 setcookie(”cookie”, $value, time()+3600);
 
 $name=$_SESSION['name'];
-$ID=$_POST['deleteid'];
+// $ID=$_POST['deleteid'];
+$ID=$_REQUEST['deleteid']; //XIUGAIWEI BUG
 
 
 $connect=mysqli_connect("localhost","root","123456fxf");
