@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+　　　　//构造加密的Cookie信息
+　　　　$value = “DefenseSCRF”;
+　　　　setcookie(”cookie”, $value, time()+3600);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,6 +84,11 @@ session_start();
 }
     ?>
 <!-- 结束php -->
+
+<?php
+　　　　$hash = md5($_COOKIE['cookie']);
+?>
+
 <div class="row">
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
@@ -90,7 +100,7 @@ session_start();
     <p>Input the ID of snippet you want to delete</p>
     <input type="text" name="deleteid"><br>
     <input type="submit" name="submit" value="Delete" style="color:red " >
-    <!-- <input type=”hidden” name=”hash” value=”<?=$hash;?>”> <!send encrypt cookie -->
+    <input type=”hidden” name=”check” value=”<?=$hash;?>”> <!-- <!send encrypt cookie -->
     </form>
 </div>
 </div>
