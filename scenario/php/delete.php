@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-//构造加密的Cookie信息,防御
-// 　　　　$value = “DefenseSCRF”;
-// 　　　　setcookie(”cookie”, $value, time()+3600);
+
+// $value = “DefenseSCRF”;
+// setcookie(”cookie”, $value, time()+3600);
 
 
 
