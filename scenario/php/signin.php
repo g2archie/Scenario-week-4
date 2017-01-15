@@ -3,7 +3,7 @@ $connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
 session_start();
  $name = $_POST["user_name"];
- $pw = password_hash($_POST["password"],PASSWORD_DEFAULT);
+ $pw = $_POST["password"];
 
 
 
@@ -43,7 +43,7 @@ function is_correct_password($name, $pw) {
 	$rows = $db->query("SELECT Password FROM userinfo WHERE Username = '$name'");
 	foreach ($rows as $row) {
 		$correct_password = $row["Password"];
-		if ($pw == $correct_password) {
+		if (password_verify($pw, $correct_password)) {
 			return TRUE;
 		}
 	}
