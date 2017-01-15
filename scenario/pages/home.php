@@ -37,7 +37,7 @@ $_SESSION['timeout']=time();
             <li><a href="#">Home</a></li>
             <li><a href="mysnippets.php">My Snippets</a></li>
             <li><a href="newsnippet.php">New Snippets</a></li>
-            <li><a href="upload.php">Upload</a></li>
+            <<!-- li><a href="upload.php">Upload</a></li> -->
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><span><?php echo $_SESSION['name'];  ?>  </span></li> 
