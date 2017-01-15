@@ -84,15 +84,13 @@ session_start();
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
 
-<?php
-　　　　$hash = md5($_COOKIE['cookie']);  //set encrypt cookie in md5,
-?>
+
 <div id="deletebutton">  
     <form method="post" action="../php/delete.php">   <!--Form of snippets deletion -->
     <p>Input the ID of snippet you want to delete</p>
     <input type="text" name="deleteid"><br>
     <input type="submit" name="submit" value="Delete" style="color:red " >
-    <input type=”hidden” name=”hash” value=”<?=$hash;?>”> <!-- send encrypt cookie -->
+    <!-- <input type=”hidden” name=”hash” value=”<?=$hash;?>”> <!send encrypt cookie -->
     </form>
 </div>
 </div>
