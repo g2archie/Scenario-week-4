@@ -1,7 +1,7 @@
 <?php
 session_start();
-$value = “DefenseSCRF”;
-setcookie(”cookie”, $value, time()+3600);
+// $value = “DefenseSCRF”;
+// setcookie(”cookie”, $value, time()+3600);
 
 if($_SESSION['checked'] == "" || $_SESSION['checked']==0){
     echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.php"."\""."</script>";
@@ -97,9 +97,7 @@ $_SESSION['timeout']=time();
 }
     ?>
 <!-- 结束php -->
-<?php
-$hash = md5($_COOKIE['cookie']);
-?>
+
 <div class="row">
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
@@ -109,7 +107,7 @@ $hash = md5($_COOKIE['cookie']);
     <p>Input the ID of snippet you want to delete</p>
     <input type="text" name="deleteid"><br>
     <input type="submit" name="submit" value="Delete" style="color:red " >
-    <input type=”hidden” name=”hash” value=”<?=$hash;?>”>
+    <!-- <input type=”hidden” name=”hash” value=”<?=$hash;?>”> -->
     </form>
 </div>
 </div>
