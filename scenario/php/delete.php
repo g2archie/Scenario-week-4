@@ -2,7 +2,7 @@
 session_start();
 
 $value = “DefenseSCRF”; //defence CSRF
-setcookie(”cookie”, $value, time()+3600);
+setcookie(”cookie”, $value, time());
 
 $name=$_SESSION['name'];
 // $ID=$_POST['deleteid'];
