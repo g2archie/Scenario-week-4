@@ -10,7 +10,7 @@
 	//echo "<h1>Hello " . $url . "</h1>";
 	echo "Redirecting";
            echo    '<script type="text/javascript">'
-          .     "window.location.href='http://'+'$url';"
+          .     "window.location.href='$url';"
           . '</script>'
 	?>
 
