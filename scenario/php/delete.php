@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// if (isset($_REQUEST['toBankId'] &&　isset($_REQUEST['money']))
-// 　　　　{
-// 　　　　    buy_stocks($_REQUEST['toBankId'],　$_REQUEST['money']);
-// 　　　　}
+//构造加密的Cookie信息,防御
+　　　　$value = “DefenseSCRF”;
+　　　　setcookie(”cookie”, $value, time()+3600);
+
 
 $name=$_SESSION['name'];
-$ID=$_REQUEST['deleteid'];  //修改
+$ID=$_REQUEST['deleteid'];  //制造漏洞
 
 $connect=mysqli_connect("localhost","root","123456fxf");
 mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
