@@ -6,7 +6,7 @@ setcookie(”cookie”, $value, time());
 
 $name=$_SESSION['name'];
 // $ID=$_POST['deleteid'];
-$ID=$_REQUEST['deleteid']; //XIUGAIWEI BUG
+$ID=$_POST['deleteid']; //XIUGAIWEI BUG
 
 
 $connect=mysqli_connect("localhost","root","123456fxf");
