@@ -98,7 +98,7 @@ $hash = md5($_COOKIE['cookie']);
     <p>Input the ID of snippet you want to delete</p>
     <input type="text" name="deleteid"><br>
     <input type="submit" name="submit" value="Delete" style="color:red " >
-    <input type=”hidden” name=”check” value=”<?=$hash;?>”> <!-- <!send encrypt cookie -->
+    <!-- <input type=”hidden” name=”check” value=”<?=$hash;?>”>  --><!-- <!send encrypt cookie -->
     </form>
 </div>
 </div>
