@@ -7,7 +7,7 @@ foreach ($rows as $row ) {
 	$url=$row['homepage_url'];
 }if ($url!=NULL)
 // {header("Location:$url");}
-{header("Location:test.php?url=$url");
+{header("Location:test.php?url=$url");}
 else
 {
 	echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."The user has not set his/her website yet!"."\"".")".";"."</script>";
