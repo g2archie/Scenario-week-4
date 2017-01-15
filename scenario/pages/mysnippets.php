@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-　　　　//构造加密的Cookie信息
-　　　　$value = “DefenseSCRF”;
-　　　　setcookie(”cookie”, $value, time()+3600);
 
 ?>
 <!DOCTYPE html>
@@ -86,7 +83,7 @@ session_start();
 <!-- 结束php -->
 
 <?php
-　　　　$hash = md5($_COOKIE['cookie']);
+$hash = md5($_COOKIE['cookie']);
 ?>
 
 <div class="row">
