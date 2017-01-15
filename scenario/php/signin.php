@@ -7,7 +7,7 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 $sql = "SELECT Username FROM userinfo WHERE Username='{$name}' AND Password='{$pw}'";
   $query = mysqli_query($connect,$sql);
-  if($result==mysqli_fetch_array($query)){
+  if(mysqli_fetch_array($query)){
   	session_start();
   	$_SESSION["name"] = $name;
 	  echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
