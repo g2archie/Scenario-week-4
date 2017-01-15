@@ -7,7 +7,7 @@ mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信
 
 // $result=mysql_query($query1) or die('sql错误'.mysql_error());
 $name=$_POST[user_name];
-$password=md5($_POST[password]);
+$password=password_hash($_POST["password"],PASSWORD_DEFAULT);
 $sql2= "SELECT Username FROM userinfo WHERE Username='$name'";
 $result=mysqli_query($connect,$sql2); 
 $num=mysqli_num_rows($result); 
