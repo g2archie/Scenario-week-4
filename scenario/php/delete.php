@@ -2,10 +2,8 @@
 session_start();
 
 
-// $value = “DefenseSCRF”;
-// setcookie(”cookie”, $value, time()+3600);
-
-
+$value = “DefenseSCRF”;
+setcookie(”cookie”, $value, time()+3600);
 
 
 
