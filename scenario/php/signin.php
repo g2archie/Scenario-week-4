@@ -1,19 +1,15 @@
 <?php
 $connect=mysqli_connect("localhost","root","123456fxf");
-mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); //链接到Scenario4数据库
+mysqli_select_db($connect,"Scenario4") or die('数据库连接错误，错误信息：'.mysqli_error()); 
 
  $name = $_POST["user_name"];
   $pw = $_POST["password"];
 
 $sql = "SELECT Username FROM userinfo WHERE Username='{$name}' AND Password='{$pw}'";
   $query = mysqli_query($connect,$sql);
- //$userinfo = mysqli_fetch_array($query, MYSQL_ASSOC);
   if($result==mysqli_fetch_array($query)){
-  		//登录成功，打印出会员信息
-           //echo '<pre>',print_r($userinfo, 1),'</pre>';
   	session_start();
   	$_SESSION["name"] = $name;
-  	//header("Location: ../pages/home.php");
 	  echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Log-in successful!"."\"".")".";"."</script>";
  	echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/home.php"."\""."</script>";
   	die();
@@ -21,7 +17,6 @@ $sql = "SELECT Username FROM userinfo WHERE Username='{$name}' AND Password='{$p
   		
 	  echo"<script type="."\""."text/javascript"."\"".">"."window.alert"."("."\""."Login failed！"."\"".")".";"."</script>";
  	        echo"<script type="."\""."text/javascript"."\"".">"."window.location="."\""."../pages/signin.html"."\""."</script>";
-  	//header("Location: ../pages/signin.html");
   	}
   
 
